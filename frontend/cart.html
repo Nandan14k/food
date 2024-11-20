@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - EAT IT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./checkout.html">Checkout</a></li>
+                <li><a href="./profile.html" id="profile-link">Profile</a></li>
+                <li><a href="./login.html" id="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <section class="cart">
+                <h2>Your Cart Items</h2>
+                <ul id="cart-items">
+                  <li>No items in your cart yet</li>
+                </ul>
+                <input type="submit" value="Clear Cart" style="border-color:cornflowerblue;" id="clear-cart" onclick="empty()">
+                <button id="checkout-button" href="./checkout.html" >Proceed to Checkout</button>
+              </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EAT IT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

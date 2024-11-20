@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - EAT IT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./checkout.html">Checkout</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Profile</h2>
+        <div id="user-profile">
+            <p><strong>Username:</strong> <span id="profile-username">NO ACCOUNT LOGGED IN</span></p>
+            <p><strong>Email:</strong> <span id="profile-email">Not available</span></p>
+            
+        </div>
+    </main>
+    <button onclick="logoutUser()" value="logout">logout</button>
+
+    <footer>
+        <p>&copy; 2024 EAT IT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
