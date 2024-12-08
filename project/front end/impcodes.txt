@@ -1,0 +1,4 @@
+for making object hover use ------> class="hover-effect"
+eg: <img src="pizza.png" alt="pizza" class="hover-effect" width="150" height="150">
+for double click to add to cart ------> ondblclick="addtocart(this)"
+eg: <img src="pizza.png" alt="pizza" width="150" height="150" class="hover-effect" ondblclick="addToCart('Pizza',10)" >

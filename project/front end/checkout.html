@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - EAT IT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./checkout.html">Checkout</a></li>
+                <li><a href="./profile.html" id="profile-link">Profile</a></li>
+                <li><a href="/.login.html" id="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Order Summary</h2>
+        <div id="order-summary">
+            <p>No items in your order yet.</p>
+        </div>
+        <form id="checkout-form" onsubmit="return submitOrder()">
+            <p><strong>Total: $<span id="order-total">0</span></strong></p>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Delivery Address</label>
+            <textarea id="address" required></textarea>
+
+            <label for="payment">Payment Method</label>
+            <select id="payment" required>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="phone pay">phone pay</option>
+                <option value="google pay">google pay</option>
+                <option value="cash on delivery">cash On Delivery</option>
+                </select>
+
+            <button type="submit">Confirm Order</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EAT IT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+// script.js
+
+// Initialize cart as an empty array
+let cart = [];
+
+// Function to add an item to the cart
+function addToCart(itemName, itemPrice) {
+    const item = {
+        name: itemName,
+        price: itemPrice,
+        quantity: 1
+    };
+
+    // Check if the item is already in the cart
+    const existingItem = cart.find(cartItem => cartItem.name === itemName);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push(item);
+    }
+    updateCartDisplay();
+}
+
+// Function to remove an item from the cart
+function removeFromCart(itemName) {
+    cart = cart.filter(cartItem => cartItem.name !== itemName);
+    updateCartDisplay();
+}
+
+// Function to update the cart display
+function updateCartDisplay() {
+    const cartElement = document.querySelector('#cart');
+    cartElement.innerHTML = '';
+
+    cart.forEach(cartItem => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.className = 'cart-item';
+        cartItemElement.innerHTML = `
+            <span>${cartItem.name}</span>
+            <span>Rs. ${cartItem.price.toFixed(2)}</span>
+            <span>Quantity: ${cartItem.quantity}</span>
+            <button onclick="removeFromCart('${cartItem.name}')">Remove</button>
+        `;
+        cartElement.appendChild(cartItemElement);
+    });
+}
+
+// Add an event listener to clear the cart button (optional)
+function clearCart() {
+    cart = [];
+    updateCartDisplay();
+}
